@@ -1,0 +1,6 @@
+[mysqld]
+ssl_cert=/var/lib/mysql-files/server.crt
+ssl_key=/var/lib/mysql-files/server.key
+ssl_ca=/var/lib/mysql-files/ca.crt
+require_secure_transport=ON
+tls_version=TLSv1.3

@@ -1,0 +1,20 @@
+version: "3"
+services:
+  mysql_mtls:
+    image: mysql-mtls
+    container_name: kastela_mysql_mtls
+    ports:
+      - 3306:3306
+    environment:
+      - MYSQL_ROOT_PASSWORD=R00Tmysql
+      - MYSQL_DATABASE=kastela
+      - MYSQL_USER=user
+      - MYSQL_PASSWORD=123456
+    volumes:
+      - mysql_mtls:/var/lib/mysql
+volumes:
+  mysql_mtls:
+    name: kastela_mysql_mtls
+networks:
+  default:
+    name: kastela_mysql_mtls

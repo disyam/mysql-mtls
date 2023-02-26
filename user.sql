@@ -1,0 +1,3 @@
+ALTER USER 'user'@'%' REQUIRE ISSUER '/CN=root' AND SUBJECT '/CN=client';
+GRANT ALL PRIVILEGES ON *.* TO 'user'@'%';
+FLUSH PRIVILEGES;
